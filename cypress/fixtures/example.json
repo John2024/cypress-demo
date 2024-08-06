@@ -1,0 +1,20 @@
+{
+  "httpStatus": "OK",
+  "data": {
+      "event": {
+          "id": "lzglrttv",
+          "title": "test",
+          "start": "2024-08-06",
+          "end": "2024-08-07",
+          "allDay": true,
+          "customer": [
+              {
+                  "firstName": "adsdsaadsasd",
+                  "lastName": "saassadasdsdasa",
+                  "phoneNumber": "3422434234234322",
+                  "city": "test"
+              }
+          ]
+      }
+  }
+}
