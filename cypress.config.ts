@@ -2,11 +2,9 @@ import { defineConfig } from "cypress";
 
 export default defineConfig({
   e2e: {
-
+    baseUrl: 'http://apptest.go.ro:9999',
     env: {
-      baseUrl: 'https://stg.demoqa.com',
-      asd: 'asd',
-      logLevel: "ASSERT"
+      logLevel: "VERBOSE"
     },
 
     watchForFileChanges: true,
