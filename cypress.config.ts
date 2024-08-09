@@ -1,15 +1,27 @@
 import { defineConfig } from "cypress";
+import dotenv from 'dotenv';
+
+if(process.env.NODE_ENV) {
+    dotenv.config({
+    path: `${__dirname}/.env.${process.env.NODE_ENV}`
+  })
+} else {
+  dotenv.config()
+}
+
 
 export default defineConfig({
   e2e: {
-    baseUrl: 'http://apptest.go.ro:9999',
+    
+    baseUrl: process.env.BASE_URL,
+
     env: {
-      logLevel: "VERBOSE"
+      logLevel: "VERBOSE",
     },
 
-    watchForFileChanges: true,
+    watchForFileChanges: false,
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+
     },
   },
 });
